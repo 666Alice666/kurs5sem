@@ -6,7 +6,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Спортивные залы</title>
-    <!-- Подключение CSS -->
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 </head>
 <body>
@@ -15,15 +14,34 @@
     </header>
 
     <main>
+        <!-- Список залов -->
         <section id="halls">
             <h2>Доступные залы</h2>
             <ul id="hall-list">
                 <!-- Список залов будет загружен через JavaScript -->
             </ul>
         </section>
+
+        <!-- Попап для бронирования -->
+        <div id="booking-popup" class="popup" style="display: none;">
+            <div class="popup-content">
+                <h3>Выберите время для бронирования</h3>
+                <label for="slot-select">Доступное время:</label>
+                <select id="slot-select" required></select>
+                <button id="confirm-booking">Подтвердить</button>
+                <button id="cancel-popup">Отмена</button>
+            </div>
+        </div>
+
+        <!-- Список бронирований -->
+        <section id="bookings">
+            <h2>Мои бронирования</h2>
+            <ul id="booking-list">
+                <!-- Список бронирований будет загружен через JavaScript -->
+            </ul>
+        </section>
     </main>
 
-    <!-- Подключение JavaScript -->
     <script src="{% static 'js/script.js' %}"></script>
 </body>
 </html>
