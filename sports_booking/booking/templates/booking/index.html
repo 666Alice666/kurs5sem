@@ -1,0 +1,29 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Спортивные залы</title>
+    <!-- Подключение CSS -->
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Система бронирования спортивных залов</h1>
+    </header>
+
+    <main>
+        <section id="halls">
+            <h2>Доступные залы</h2>
+            <ul id="hall-list">
+                <!-- Список залов будет загружен через JavaScript -->
+            </ul>
+        </section>
+    </main>
+
+    <!-- Подключение JavaScript -->
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>
